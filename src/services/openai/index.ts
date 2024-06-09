@@ -21,10 +21,10 @@ export class Openai {
 });
     try {
       const response = await openai.completions.create({
-        model: "gpt-3.5-turbo-instruct",
+        model: "gpt-3.5-turbo-16k",
         prompt: `${message} ${MESSAGE_COMPLEMENT}`,
-        max_tokens: 500,
-        temperature: 0,
+        max_tokens: 20,
+        temperature: 0.7,
       });
       return response;
     } catch (error) {

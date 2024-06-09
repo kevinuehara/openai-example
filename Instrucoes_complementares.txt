@@ -115,7 +115,24 @@ por
 model: "gpt-3.5-turbo-instruct",
 
 ===============================================================
+Error: 429 Request too large for project proj_H8Zx5I2g4ct0XhXg48xd8AcB organization org-ijBXRYhxYzm8kX2gBmAQRfLJ on tokens per min (TPM): Limit 150, Requested 537. The input or output tokens must be reduced in order to run successfully. Visit 
+
+
+deu certo:
+model: "gpt-3.5-turbo-16k",
+
+tentativas:
+
+model: "gpt-3.5-turbo-instruct",        //does not have access to model
+model: "gpt-3.5-turbo",
+model: "text-davinci-003",
+
+https://stackoverflow.com/questions/75617865/openai-chatgpt-api-error-invalidrequesterror-unrecognized-request-argument-su
+
+https://platform.openai.com/docs/api-reference/chat/create
 
 
 
+
+ This is a chat model and not supported in the v1/completions endpoint. Did you mean to use v1/chat/completions?
 
