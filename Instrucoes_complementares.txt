@@ -1,0 +1,121 @@
+https://github.com/openai/openai-node
+
+https://github.com/kevinuehara/maps-openai
+https://dev.to/nodebr/integrando-ia-com-mapas-para-geracao-de-localizacoes-411p
+https://www.youtube.com/watch?v=Zno2ZPdtjSY
+https://www.youtube.com/watch?v=Ap47z1cnhfY
+
+17:21 dependencias
+
+Slide:
+https://docs.google.com/presentation/d/1XvCQHbyAo3hDy40jvU4gfukviR-UUy4EtWT4NbUXF4Y/edit#slide=id.g1e7a2a14242_0_19
+https://platform.openai.com/docs/api-reference
+
+Instagram:
+https://www.instagram.com/uehara_kevin/
+
+Chave do openia
+sk-proj-EltLa6A7lxQpvcJi8ABrT3BlbkFJNP2EwOT7HdFB6nPdjNAO
+
+chave do mapa tiler:
+GeRySB6rHsrysa2Hc941
+
+incompatibilidades:
+https://stackoverflow.com/questions/73048645/npm-run-dev-not-working-with-vite-laravel-9
+
+versao do nodejs:
+nodejs -v           12.22.9
+
+instalar o gerenciador de versoes do node, o nvm
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
+
+
+chave do mapa VITE_MAP_TILER_API_KEY
+https://docs.maptiler.com/cloud/api/authentication-key/
+
+=================================================================
+bom exemplo:
+Guia:
+https://dev.to/nodebr/integrando-ia-com-mapas-para-geracao-de-localizacoes-411p
+
+Live desse projeto
+https://www.youtube.com/watch?v=Ap47z1cnhfY
+
+Repositorio
+https://github.com/kevinuehara/maps-openai
+
+===========================================================
+Pode ser esse:
+npm install -Dtailwindcss postcss autoprefixer
+
+npx tailwindcss init -p
+
+comando para migrar openai
+npm exec openai migrate
+
+https://github.com/openai/openai-node/discussions/217
+
+dangerouslyAllowBrowser: true   
+
+const openai = new OpenAI({
+    baseURL: 'http://localhost:11434/v1/',
+    // required but ignored
+    apiKey: 'ollama',
+    dangerouslyAllowBrowser: true   
+  })
+
+Mensagem de erro:
+index.ts:31 Error: 404 The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+
+
+Mude no index.ts
+change text-davinci-003 para gpt-3.5-turbo-instruct.
+===============================================================
+"https://api.openai.com/v1/completions"
+
+
+===============================================================
+Montagem de Ambiente:
+
+Criando aplicacao:
+yarn create vite openai-maps --template react-ts
+
+Dependencias:
+yarn
+
+Subindo servidor:
+yarn dev
+
+Atualizar BrowsersList:
+npx update-browserslist-db@latest
+
+configurar o tailwind:
+npm install -Dtailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+Criar .env com as duas chaves
+VITE_MAP_TILER_API_KEY =GeRySB6rHsrysa2Hc941
+VITE_OPENAI_API_KEY=sk-proj-EltLa6A7lxQpvcJi8ABrT3BlbkFJNP2EwOT7HdFB6nPdjNAO
+
+Outras dependencias necessarias:
+yarn add maplibre-gl react-map-gl openai
+
+migrande versão openai
+npm exec openai migrate
+
+Configurar na linha 11 e na linha 20 do arquivo index.ts:
+dangerouslyAllowBrowser: true
+
+Configurar na linha 24 do arquivo index.ts:
+trocar model: "text-davinci-003",
+por
+model: "gpt-3.5-turbo-instruct",
+
+===============================================================
+
+
+
+
